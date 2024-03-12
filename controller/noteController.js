@@ -1,5 +1,5 @@
 const noteModel = require("../model/notesModel");
-const { findAndDeleteNote, updateNoteData, createNewNote } = require("../services/noteServices");
+const { findAndDeleteNote, updateNoteData, createNewNote, insertManyNotes } = require("../services/noteServices");
 
 exports.createNote = async(req,res,next) =>{
     const {id,title, description, difficulty,date} = req.body;
@@ -49,6 +49,17 @@ exports.getNote = async(req,res,next) =>{
     try{
         const note = await noteModel.findOne({id:noteId});
         res.json({status : 'success',data: note});
+        } catch(err){
+            console.log('Error while fetching note')
+            throw err;
+        }
+    }
+
+exports.createManyNotes = async(req,res,next) =>{
+    const {notes} = req.body;
+    try{
+        const result = await insertManyNotes(notes);
+        res.json({status : 'success',data: result});
         } catch(err){
             console.log('Error while fetching note')
             throw err;
