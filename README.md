@@ -87,3 +87,73 @@ https://note-keeper-api-6yg7.onrender.com
   "message": "note updated successfully"
   }
   ```
+## 5. Delete a Note
+* URL: /deleteNote/:id
+* Method: DELETE
+* Response
+  ```https
+  {
+  "status": "success",
+  "message": "note deleted successfully"
+  }
+  ```
+
+## 6. Create or Update Multiple Notes : allows creating new notes if their IDs don't exist in the database, otherwise updates existing notes. 
+Request body includes note objects with id, title, description, date, and difficulty fields.
+* URL: /createManyNotes
+* Method: POST
+* Request Body:
+ ```https
+  {
+  "notes": [
+    {
+      "title": "flutter",
+      "description": "Description for Todo 1",
+      "date": "Mar 15,2024",
+     "difficulty": 1,
+      "id":11
+    },
+    {
+      "title": "Dart",
+      "description": "Description for Todo 2",
+      "difficulty": 2,
+      "date": "Mar 15,2024",
+      "id":12
+    },
+    {
+      "title": "Sqlite",
+      "description": "Description for Todo 3",
+      "difficulty": 3,
+      "date": "Mar 15,2024",
+      "id":13
+    },
+    {
+      "title": "Mongo DB",
+      "description": "Description for Todo 3",
+      "difficulty": 2,
+      "date": "Mar 15,2024",
+      "id":13
+    }
+  ]
+}
+  ```
+* Response
+  ```https
+  {
+  "status": "success",
+  "data": {
+    "insertedCount": 0,
+    "matchedCount": 1,
+    "modifiedCount": 1,
+    "deletedCount": 0,
+    "upsertedCount": 3,
+    "upsertedIds": {
+      "0": "65f31163c4995f05c846386c",
+      "1": "65f31163c4995f05c846386d",
+      "2": "65f31163c4995f05c8463870"
+    },
+    "insertedIds": {}
+   }
+   }
+  ```
+Feel free to customize this documentation based on the specific functionalities and design of your Note Keeper API.
