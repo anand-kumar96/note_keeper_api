@@ -59,7 +59,7 @@ exports.createManyNotes = async(req,res,next) =>{
     const {notes} = req.body;
     try{
         const result = await insertManyNotes(notes);
-        res.json({status : 'success',data: result});
+        res.json({status : 'success', data: result});
         } catch(err){
             console.log('Error while fetching note')
             throw err;
