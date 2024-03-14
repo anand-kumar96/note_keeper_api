@@ -7,7 +7,7 @@ The base URL for accessing the Note Keeper API is:
 https://note-keeper-api-6yg7.onrender.com
 ```
 ## Endpoints
-# 1. Create a Note
+## 1. Create a Note
 * URL: /createNote
 * Method: POST
 * Request Body:
@@ -28,12 +28,12 @@ https://note-keeper-api-6yg7.onrender.com
    }
   ```
 
-# 2. Get All Notes
+## 2. Get All Notes
 * URL: /getAllNote
 * Method: GET
 * Response
   ```https
-    {
+  {
    "status": "success",
    "length": 1,
    "data": [
@@ -47,14 +47,14 @@ https://note-keeper-api-6yg7.onrender.com
            "__v": 0
           }
         ]
-      }
+  }
   ```
-# 3. Get a Note by ID
+## 3. Get a Note by ID
 * URL: /getNote/1
 * Method: GET
 * Response
   ```https
-     {
+  {
      "status": "success",
     "data": {
     "_id": "65f30ccc677a2272ffc89f76",
