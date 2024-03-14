@@ -31,8 +31,6 @@ https://note-keeper-api-6yg7.onrender.com
 2. Get All Notes
 * URL: /getAllNote
 * Method: GET
-
-  ```
 * Response
   ```https
     {
@@ -54,8 +52,6 @@ https://note-keeper-api-6yg7.onrender.com
 3. Get a Note by ID
 * URL: /getNote/1
 * Method: GET
-
-  ```
 * Response
   ```https
      {
