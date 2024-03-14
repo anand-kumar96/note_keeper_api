@@ -20,3 +20,54 @@ https://note-keeper-api-6yg7.onrender.com
   "date":"Mar 14,2024"
 }
   ```
+* Response
+  ```https
+  {
+  "status": "success",
+  "message": "note created successfully"
+   }
+  ```
+
+2. Get All Notes
+* URL: /getAllNote
+* Method: GET
+
+  ```
+* Response
+  ```https
+    {
+   "status": "success",
+   "length": 1,
+   "data": [
+          {
+           "_id": "65f30ccc677a2272ffc89f76",
+           "id": 1,
+           "title": "Flutter",
+           "description": "Flutter is Google's UI framework for crafting high-quality native interfaces on iOS, Android, web, and desktop",
+           "difficulty": 3,
+           "date": "Mar 14,2024",
+           "__v": 0
+          }
+        ]
+      }
+  ```
+3. Get a Note by ID
+* URL: /getNote/1
+* Method: GET
+
+  ```
+* Response
+  ```https
+     {
+     "status": "success",
+    "data": {
+    "_id": "65f30ccc677a2272ffc89f76",
+    "id": 1,
+   "title": "Flutter",
+   "description": "Flutter is Google's UI framework for crafting high-quality native interfaces on iOS, Android, web, and desktop",
+   "difficulty": 3,
+   "date": "Mar 14,2024",
+   "__v": 0
+    }
+  }
+  ```
