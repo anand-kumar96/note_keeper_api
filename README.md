@@ -50,7 +50,7 @@ https://note-keeper-api-6yg7.onrender.com
   }
   ```
 ## 3. Get a Note by ID
-* URL: /getNote/1
+* URL: /getNote/:id
 * Method: GET
 * Response
   ```https
@@ -65,5 +65,25 @@ https://note-keeper-api-6yg7.onrender.com
    "date": "Mar 14,2024",
    "__v": 0
     }
+  }
+   ```
+## 4. Update a Note
+* URL: /updateNote/:id
+* Method: PATCH
+* Request Body:
+  ```https
+   {
+    "id":1,
+    "title":"Notes",
+    "description":"my first notes",
+    "difficulty": 2,
+   "date":"Mar 15,2024"
+  }
+  ```
+* Response
+  ```https
+  {
+  "status": "success",
+  "message": "note updated successfully"
   }
   ```
